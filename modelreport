@@ -1,0 +1,110 @@
+Feedforward Model Performance:
+  Test Accuracy: 99.65%
+  Training Accuracy (final): 99.60%
+
+Detailed Classification Report (Feedforward):
+--------------------------------------------------
+                                   precision    recall  f1-score   support
+
+              App/Technical Issue      1.000     0.976     0.988       205
+           Customer Support Delay      1.000     0.995     0.998       208
+                  Damaged Product      1.000     0.995     0.998       207
+         Delivery Executive Issue      0.978     0.989     0.983        88
+                 Duplicate Charge      1.000     0.995     0.998       206
+        Inconsistent Order Status      0.990     1.000     0.995       206
+                  Incorrect Order      0.995     1.000     0.998       206
+                    Late Delivery      1.000     0.995     0.998       204
+                    Missing Items      0.990     1.000     0.995       205
+            Non-Responsive Seller      0.995     1.000     0.998       206
+Order Cancellation Without Notice      1.000     1.000     1.000       205
+                    Payment Issue      1.000     1.000     1.000       204
+          Poor Quality Vegetables      1.000     1.000     1.000       208
+           Promotional Code Issue      1.000     1.000     1.000       206
+                     Refund Issue      1.000     1.000     1.000       206
+             Spillage in Delivery      1.000     1.000     1.000       207
+                   Tracking Issue      0.976     0.990     0.983       205
+             Unhygienic Packaging      1.000     1.000     1.000       205
+     Unprofessional Support Agent      1.000     0.995     0.998       207
+           Wrong Address Delivery      0.995     0.995     0.995       206
+
+                         accuracy                          0.997      4000
+                        macro avg      0.996     0.996     0.996      4000
+                     weighted avg      0.997     0.997     0.997      4000
+
+Feedforward model evaluation completed!
+
+
+CNN Model Performance:
+  Test Accuracy: 99.80%
+  Training Accuracy (final): 99.71%
+
+
+LSTM Model Performance:
+  Test Accuracy: 99.85%
+  Training Accuracy (final): 99.76%
+
+Detailed Classification Report (LSTM):
+--------------------------------------------------
+                                   precision    recall  f1-score   support
+
+              App/Technical Issue      1.000     0.995     0.998       205
+           Customer Support Delay      1.000     0.995     0.998       208
+                  Damaged Product      1.000     1.000     1.000       207
+         Delivery Executive Issue      0.989     1.000     0.994        88
+                 Duplicate Charge      1.000     0.995     0.998       206
+        Inconsistent Order Status      0.995     1.000     0.998       206
+                  Incorrect Order      1.000     1.000     1.000       206
+                    Late Delivery      1.000     0.995     0.998       204
+                    Missing Items      1.000     1.000     1.000       205
+            Non-Responsive Seller      0.995     1.000     0.998       206
+Order Cancellation Without Notice      1.000     1.000     1.000       205
+                    Payment Issue      0.995     1.000     0.998       204
+          Poor Quality Vegetables      1.000     1.000     1.000       208
+           Promotional Code Issue      1.000     0.995     0.998       206
+                     Refund Issue      1.000     1.000     1.000       206
+             Spillage in Delivery      0.995     1.000     0.998       207
+                   Tracking Issue      0.995     1.000     0.998       205
+             Unhygienic Packaging      1.000     1.000     1.000       205
+     Unprofessional Support Agent      1.000     0.995     0.998       207
+           Wrong Address Delivery      1.000     1.000     1.000       206
+
+                         accuracy                          0.999      4000
+                        macro avg      0.998     0.999     0.998      4000
+                     weighted avg      0.999     0.999     0.999      4000
+
+LSTM model training completed!
+
+
+
+
+
+Detailed Classification Report (CNN):
+--------------------------------------------------
+                                   precision    recall  f1-score   support
+
+              App/Technical Issue      1.000     0.990     0.995       205
+           Customer Support Delay      1.000     1.000     1.000       208
+                  Damaged Product      1.000     0.995     0.998       207
+         Delivery Executive Issue      0.989     0.989     0.989        88
+                 Duplicate Charge      1.000     1.000     1.000       206
+        Inconsistent Order Status      0.995     1.000     0.998       206
+                  Incorrect Order      1.000     1.000     1.000       206
+                    Late Delivery      0.995     1.000     0.998       204
+                    Missing Items      0.990     1.000     0.995       205
+            Non-Responsive Seller      1.000     1.000     1.000       206
+Order Cancellation Without Notice      0.995     1.000     0.998       205
+                    Payment Issue      1.000     1.000     1.000       204
+          Poor Quality Vegetables      1.000     1.000     1.000       208
+           Promotional Code Issue      1.000     0.995     0.998       206
+                     Refund Issue      1.000     1.000     1.000       206
+             Spillage in Delivery      1.000     1.000     1.000       207
+                   Tracking Issue      0.990     0.990     0.990       205
+             Unhygienic Packaging      1.000     1.000     1.000       205
+     Unprofessional Support Agent      1.000     0.995     0.998       207
+           Wrong Address Delivery      1.000     1.000     1.000       206
+
+                         accuracy                          0.998      4000
+                        macro avg      0.998     0.998     0.998      4000
+                     weighted avg      0.998     0.998     0.998      4000
+
+CNN model training completed!

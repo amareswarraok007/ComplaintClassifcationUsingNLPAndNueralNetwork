@@ -1,0 +1,39 @@
+#                Complaint Classification using Neural Networks and NLP
+
+
+
+## problem statement : 
+`Build a model that can classify customer complaints into predefined categories using` `Natural Language Processing (NLP) and Neural Networks.`
+
+# Methods
+
+Data Understanding (EDA)
+- Explored class distribution and complaint length statistics; identified mild imbalance.
+- Visualized distributions and top categories to guide padding length.
+
+Text Preprocessing
+- Lowercase; remove “bigbasket” prefix; keep alphanumeric; collapse whitespace.
+- Tokenize with NLTK word_tokenize.
+- Stopwords from NLTK with negations kept (not, no, never, nor) and key sentiment tokens preserved.
+- Lemmatize with WordNet; output column: processed_text.
+- Label encoding of Category to integers.
+
+Vectorization and Embeddings
+- Built a vocabulary of up to 20,000 tokens with <PAD>/<UNK>.
+- Sequence length fixed at 25 tokens (from EDA percentiles).
+- Embeddings: FastText wiki-news-300d-1M.vec (pretrained, frozen). If unavailable, random normal init used.
+
+Models
+- Feedforward (FF): Embedding lookup → mean pooling → MLP 300→128→64→N with Dropout(0.3).
+- BiLSTM: 2-layer bidirectional LSTM (hidden=128, dropout=0.3); last fwd/bwd hidden concat → MLP 256→128→64→N with Dropout(0.4).
+- CNN: Conv1d over embeddings with filter sizes [3,4,5], 128 filters each; max-over-time pooling; concat → MLP 384→128→64→N with Dropout(0.4).
+- Embedding weights frozen for stability; remaining layers trained end-to-end.
+
+Training Setup
+- Split: stratified 80% train / 20% test.
+- Hyperparameters: epochs=20, batch size=32, Adam (lr=1e-3), CrossEntropyLoss.
+- Device: CUDA if available, else CPU.
+
+Evaluation Protocol
+- Report overall accuracy and per-class precision, recall, F1 (sklearn classification_report) on the test set.
+- Plot/save confusion matrices for FF/LSTM/CNN to analyze error patterns.
